@@ -38,7 +38,7 @@ pipeline {
         stage('Deploy') {
            steps {
                 sshagent(['my-ssh-key']) {
-                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@35.173.129.221 "kubectl set image deployment/coursework cw2-server=docker.io/lmcint301/cw2-server:1.0"'
+                    sh 'ssh -o StrictHostKeyChecking=no ubuntu@44.202.57.118 "kubectl set image deployment/coursework cw2-server=docker.io/lmcint301/cw2-server:1.0"'
                 }
             }
         }
